@@ -110,7 +110,7 @@ jobs:
 
   run-ui:
     runs-on: macos-11
-    if: github.actor != 'rpappalax'
+    if: github.event.pull_request.head.repo.full_name != github.repository && github.actor != 'MickeyMoz'
 
     timeout-minutes: 60
     strategy:
