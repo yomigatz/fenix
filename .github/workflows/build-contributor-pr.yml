@@ -125,6 +125,7 @@ jobs:
         with:
           api-level: ${{ matrix.api-level }}
           force-avd-creation: true
+          sdcard-path-or-size: 600M
           target: ${{ matrix.target }}
           arch: x86_64
           profile: pixel_3a
