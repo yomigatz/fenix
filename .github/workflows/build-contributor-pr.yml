@@ -1,5 +1,8 @@
 name: Android build PR
-on: [pull_request]
+on:
+  push:
+    branches:
+      - insufficient-storage 
 jobs:
   run-build:
     runs-on: ubuntu-20.04
@@ -107,7 +110,7 @@ jobs:
 
   run-ui:
     runs-on: macos-11
-    if: github.event.pull_request.head.repo.full_name != github.repository && github.actor != 'rpappalax'
+    if: github.actor != 'rpappalax'
 
     timeout-minutes: 60
     strategy:
